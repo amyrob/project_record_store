@@ -21,9 +21,19 @@ class Album
     @id = album['id'].to_i
   end
 
+  def stock_level()
+    
+  end
+
   def Album.delete
     sql = "DELETE FROM albums;"
     SqlRunner.run(sql)
+  end
+
+  def Album.all
+    sql = "SELECT * FROM albums;"
+    all_albums = SqlRunner.run(sql)
+    return all_albums.map { |album| Album.new(album)}
   end
 
 end #end of class

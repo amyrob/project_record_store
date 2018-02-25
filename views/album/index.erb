@@ -1,0 +1,9 @@
+<h2>Albums</h2>
+<% @albums.each do |album| %>
+<p>Album ID: <%= album.id %></p>
+<p>Title: <%= album.title %></p>
+<p>Quantity: <%= album.quantity %></p>
+<p>Artist ID: <%= album.artist_id %></p>
+<br>
+<% end %>
+<p><a href="/albums/new">Add New Album</a></p>
