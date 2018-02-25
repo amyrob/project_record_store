@@ -22,18 +22,25 @@ class Album
   end
 
   def stock_level()
-    
-  end
+    if @quantity.to_i <= 5
+      return "Low"
+    end
+      if @quantity.to_i <= 10
+        return "Medium"
+      else
+        return "High"
+      end
+    end
 
-  def Album.delete
-    sql = "DELETE FROM albums;"
-    SqlRunner.run(sql)
-  end
+    def Album.delete
+      sql = "DELETE FROM albums;"
+      SqlRunner.run(sql)
+    end
 
-  def Album.all
-    sql = "SELECT * FROM albums;"
-    all_albums = SqlRunner.run(sql)
-    return all_albums.map { |album| Album.new(album)}
-  end
+    def Album.all
+      sql = "SELECT * FROM albums;"
+      all_albums = SqlRunner.run(sql)
+      return all_albums.map { |album| Album.new(album)}
+    end
 
-end #end of class
+  end #end of class
