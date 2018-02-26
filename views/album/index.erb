@@ -1,9 +1,23 @@
 <h2>Albums</h2>
-<% @albums.each do |album| %>
-<p>Album ID: <%= album.id %></p>
-<p>Title: <%= album.title %></p>
-<p>Stock Level: <%= album.stock_level %></p>
-<p>Artist: <%= album.artist %></p>
-<br>
-<% end %>
+
 <p><a href="/albums/new">Add New Album</a></p>
+
+<table>
+  <tr>
+    <th>Album ID:</th>
+    <th>Artist:</th>
+    <th>Title:</th>
+    <th>Stock Level:</th>
+  </tr>
+
+  <% @albums.each do |album| %>
+
+  <tr>
+    <td><%= album.id %></td>
+    <td><%= album.artist %></td>
+    <td><%= album.title %></td>
+    <td><%= album.stock_level %></td>
+
+  </tr>
+<% end %>
+</table>
