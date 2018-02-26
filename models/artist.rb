@@ -1,4 +1,5 @@
 require_relative('../db/sql_runner')
+require_relative('album')
 
 class Artist
 
@@ -30,4 +31,5 @@ class Artist
     all_artists = SqlRunner.run(sql)
     return all_artists.map { |artist| Artist.new(artist)}
   end
-end #end of class
+
+  end #end of class
