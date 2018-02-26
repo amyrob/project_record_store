@@ -14,5 +14,5 @@ end
 
 post '/albums' do
   Album.new(params).save
-  redirect to '/albums'
+  redirect to '/'
 end

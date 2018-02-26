@@ -1,11 +1,6 @@
 <h2>Add New Album</h2>
+
 <form method="post" action="/albums">
-  <label for="title"> Title: </label>
-  <input id="title" type="text" name="title"/>
-<br>
-  <label for="quantity"> Quantity </label>
-  <input id="quantity" type="text" name="quantity"/>
-<br>
 
   <label for="artist_name"> Artist: </label>
   <select id="artist_name" name="artist_id">
@@ -13,7 +8,12 @@
     <option value=<%= artist.id %>><%= artist.name %> </option>
     <% end  %>
   </select>
-
+<br>
+  <label for="title"> Title: </label>
+  <input id="title" type="text" name="title"/>
+<br>
+  <label for="quantity"> Quantity </label>
+  <input id="quantity" type="text" name="quantity"/>
 <br>
   <input type="submit" value="Add Album">
 </form>

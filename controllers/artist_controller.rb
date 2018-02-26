@@ -14,5 +14,5 @@ end
 
 post '/artists' do
   Artist.new(params).save
-  redirect to '/artists'
+  redirect to '/albums/new'
 end
