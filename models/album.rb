@@ -24,35 +24,55 @@ class Album
     @id = album['id'].to_i
   end
 
+  def delete()
+    sql = "DELETE FROM albums
+    WHERE id = $1;"
+    values = [@id]
+    SqlRunner.run(sql, values)
+  end
+
   def stock_level()
     if @quantity.to_i <= 5
       return "Low"
     end
-      if @quantity.to_i <= 10
-        return "Medium"
-      else
-        return "High"
-      end
+    if @quantity.to_i <= 10
+      return "Medium"
+    else
+      return "High"
     end
+  end
 
-    def artist()
-        sql = "SELECT * FROM artists
-        WHERE artists.id = $1"
-        values = [@artist_id]
-        artist_name = SqlRunner.run(sql, values)
-        new_artist = artist_name.map {|artist| Artist.new(artist)}.first
-        return new_artist.name
-      end
+  def artist()
+    sql = "SELECT * FROM artists
+    WHERE artists.id = $1"
+    values = [@artist_id]
+    artist_name = SqlRunner.run(sql, values)
+    new_artist = artist_name.map {|artist| Artist.new(artist)}.first
+    return new_artist.name
+  end
 
-    def Album.delete
-      sql = "DELETE FROM albums;"
-      SqlRunner.run(sql)
-    end
+  def profit()
+    return @sell_price - @buy_price
+  end
 
-    def Album.all
-      sql = "SELECT * FROM albums;"
-      all_albums = SqlRunner.run(sql)
-      return all_albums.map { |album| Album.new(album)}
-    end
+  def Album.delete
+    sql = "DELETE FROM albums;"
+    SqlRunner.run(sql)
+  end
 
-  end #end of class
+  def Album.find(id)
+    sql = "SELECT * FROM albums
+    WHERE id = $1"
+    values = [id]
+    album = SqlRunner.run(sql, values)
+    outcome = Album.new(album.first)
+    return outcome
+  end
+
+  def Album.all
+    sql = "SELECT * FROM albums;"
+    all_albums = SqlRunner.run(sql)
+    return all_albums.map { |album| Album.new(album)}
+  end
+
+end #end of class

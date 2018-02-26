@@ -1,26 +1,26 @@
+
 <h2>Add New Album</h2>
 
 <form method="post" action="/albums">
 
-  <label for="artist_name"> Artist: </label>
+  <label for="artist_name"> Artist </label>
   <select id="artist_name" name="artist_id">
     <% @artists.each do |artist| %>
     <option value=<%= artist.id %>><%= artist.name %> </option>
     <% end  %>
   </select>
   <br>
-  <label for="title"> Title: </label>
+  <label for="title"> Title </label>
   <input id="title" type="text" name="title"/>
   <br>
   <label for="quantity"> Quantity </label>
   <input id="quantity" type="text" name="quantity"/>
   <br>
-  <label for="buy_price"> Buy Price: </label>
-  <input id="buy_price" type="text" name="buy-price"/>
+  <label for="buy-price"> Buy Price </label>
+  <input id="buy-price" type="text" name="buy_price"/>
   <br>
-  <label for="sell_price"> Sell Price: </label>
-  <input id="sell_price" type="text" name="sell-price"/>
+  <label for="sell-price"> Sell Price </label>
+  <input id="sell-price" type="text" name="sell_price"/>
   <br>
-
   <input type="submit" value="Add Album">
 </form>

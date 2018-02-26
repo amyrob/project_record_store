@@ -3,10 +3,12 @@
 <p><a href="/albums/new">Add New Album</a></p>
 <table>
   <tr>
-    <th>Album ID:</th>
-    <th>Artist:</th>
-    <th>Title:</th>
-    <th>Stock Level:</th>
+    <th>Album ID</th>
+    <th>Artist</th>
+    <th>Title</th>
+    <th>Stock Level</th>
+    <th>Sell Price</th>
+
 
   </tr>
 
@@ -17,6 +19,11 @@
     <td><%= album.artist %></td>
     <td><%= album.title %></td>
     <td><%= album.stock_level %></td>
+    <td><%= album.sell_price %></td>
+    <td><form action="/albums/<%= album.id %>" method="get">
+       <input type="submit" value="Artist Inventory"></td>
+      </tr>
+    </form>
 
   </tr>
 <% end %>

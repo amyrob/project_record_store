@@ -16,3 +16,14 @@ post '/artists' do
   Artist.new(params).save
   redirect to '/albums/new'
 end
+
+get '/artists/:id' do
+  @artist = Artist.find(params[:id].to_i)
+  erb(:"/artist/show")
+end
+
+post '/artists/:id/delete' do
+  artist = Artist.find(params[:id].to_i)
+  artist.delete()
+  redirect to '/artists'
+end

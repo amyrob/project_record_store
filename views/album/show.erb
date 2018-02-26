@@ -1,0 +1,8 @@
+<h2>Album ID: <%= @album.id %></h2>
+
+<table>
+<td><form action="/albums/<%= @album.id %>/delete" method="post">
+   <input type="submit" value="Delete Album"></td>
+  </tr>
+</form>
+</table>
