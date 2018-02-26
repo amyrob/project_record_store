@@ -1,5 +1,18 @@
 <h2>Artists</h2>
-<% @artists.each do |artist| %>
-<p>Name: <%= artist.name %></p>
-<% end %>
+
 <p><a href="/artists/new">Add New Artist</a></p>
+
+<table>
+  <tr>
+    <th>Artist ID:</th>
+    <th>Name:</th>
+  </tr>
+
+  <% @artists.each do |artist| %>
+
+  <tr>
+    <td><%= artist.id %></td>
+    <td><%= artist.name %></td>
+  </tr>
+<% end %>
+</table>
