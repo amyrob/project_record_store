@@ -3,23 +3,30 @@
 <head>
   <meta charset="utf-8">
   <link rel="stylesheet" type="text/css" href="style.css">
+  <link <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Bungee+Hairline|Kameron" rel="stylesheet">
   <title>Epic Inventory</title>
 </head>
-<body>
-  <h1>Epic Records Inventory</h1>
-  <nav>
+<header><h1>Epic Records</h1></header>
+<navbar>
   <ul>
     <li>
       <a href="/">Home</a>
     </li>
     <li>
-      <a href="/artists">Artists</a>
+      <div class="dropdown">
+        <span><a href="/artists">Artists</a></span>
+        <div class="dropdown-content">
+          <a href="/artists/new">Add New Artist</a>
+        </div>
+      </div>
     </li>
     <li>
       <a href="/albums">Albums</a>
     </li>
   </ul>
-</nav>
+</navbar>
+<body>
 <%= yield %>
 </body>
+<footer><h3>Epic Records...where everything sounds epic!</h3></footer>
 </html>

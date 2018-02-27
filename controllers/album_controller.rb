@@ -24,7 +24,7 @@ end
 
 get '/albums/:id/edit' do
   @album = Album.find(params[:id])
-  erb(:"album/edit" )
+  erb(:"/album/edit" )
 end
 
 post '/albums/:id/edit' do

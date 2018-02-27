@@ -1,3 +1,104 @@
-h1  {
+header{
+  display: flex;
+  justify-content: center;
+  height: 5em;
+  padding top: 0.25em;
+  padding bottom: 0.25em;
+}
+
+header h1{
   color: teal;
+  font-family: 'Bungee Shade', cursive;
+  font-size: 4em;
+  margin-top: 0.25em;
+}
+
+navbar{
+  width: 100%;
+  font-size: 1.75em;
+}
+
+navbar ul{
+  display: flex;
+  justify-content: space-around;
+  list-style: none;
+  background-color: teal;
+}
+
+navbar a{
+  font-family: 'Bungee', cursive;
+  color: white;
+  text-decoration: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+.dropdown-content {
+  font-size: 0.75em;
+  display: none;
+  position: relative;
+  background-color: teal;
+  min-width: 10em;
+  padding: 0.1em 0.1em;
+}
+
+body {
+  font-family: 'Kameron';
+  background-color: #E9F1F7;
+}
+
+table {
+  display: flex;
+  justify-content: center;
+  text-align: left;
+  width: 100%;
+}
+
+
+th, td {
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-color: lightgrey;
+}
+
+td:nth-child(1) {
+  width: 8em;
+}
+
+td:nth-child(2) {
+  column-width: 12em;
+}
+
+td:nth-child(3) {
+  column-width: 25em;
+}
+
+td:nth-child(4) {
+  width: 8em;
+}
+
+td:nth-child(5) {
+  width: 5em;
+}
+
+td:nth-child(6) {
+  width: 5em;
+}
+
+td:nth-child(7) {
+  width: 5em;
+}
+
+tr:hover {
+  background-color: white;
+}
+
+footer {
+  font-family: Bungee Hairline;
 }
