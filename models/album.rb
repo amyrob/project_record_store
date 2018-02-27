@@ -31,11 +31,18 @@ class Album
     SqlRunner.run(sql, values)
   end
 
+  def update
+    sql = "UPDATE albums SET (quantity, buy_price, sell_price)
+    = ($1, $2, $3) WHERE id = $4;"
+
+    values = [@quantity, @buy_price, @sell_price, @id]
+    SqlRunner.run(sql, values)
+  end
+
   def stock_level()
     if @quantity.to_i <= 5
       return "Low"
-    end
-    if @quantity.to_i <= 10
+    elsif @quantity.to_i <= 10
       return "Medium"
     else
       return "High"

@@ -22,6 +22,16 @@ get '/albums/:id' do
   erb(:"/album/show")
 end
 
+get '/albums/:id/edit' do
+  @album = Album.find(params[:id])
+  erb(:"album/edit" )
+end
+
+post '/albums/:id/edit' do
+  Album.new(params).update
+  redirect to '/albums'
+end
+
 post '/albums/:id/delete' do
   album = Album.find(params[:id].to_i)
   album.delete()

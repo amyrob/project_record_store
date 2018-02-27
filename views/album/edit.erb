@@ -1,0 +1,22 @@
+<form class="" action="/albums/<%= @album.id %>/edit" method="post">
+  <label for="quantity">Quantity</label>
+  <input type="text"
+  name="quantity"
+  id="quantity"
+  value="<%= @album.quantity %>"
+  />
+
+  <label for="buy-price">Buy Price</label>
+  <input type="text"
+  name="buy_price"
+  id="buy-price"
+  value="<%= @album.buy_price %>"
+  />
+  <label for="sell-price">Sell Price</label>
+  <input type="text"
+  name="sell_price"
+  id="sell-price"
+  value="<%= @album.sell_price %>"
+  />
+     <input type="submit" value="Update Album"><td>
+</form>

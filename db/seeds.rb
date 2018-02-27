@@ -18,7 +18,7 @@ artist1.save()
 artist2.save()
 
 album1 = Album.new ({
-  "title" => "White Noise",
+  "title" => "All We Know Of Heaven, All We Need Of Hell",
   "quantity" => "10",
   "artist_id" => artist1.id,
   "buy_price" => "8",
