@@ -10,11 +10,7 @@
 
   <tr>
     <td><%= artist.id %></td>
-    <td><%= artist.name %></td>
-    <td><a href="/artists/<%= artist.id %>" method="get">
-       <input type="submit" value="Artist Inventory"></td>
-      </tr>
-    </form>
-
-<% end %>
+    <td><a href="/artists/<%= artist.id %>" method="get"><%= artist.name %></a></td>
+    </tr>
+  <% end %>
 </table>

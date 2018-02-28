@@ -27,6 +27,15 @@ class Artist
     SqlRunner.run(sql, values)
   end
 
+  def albums()
+    sql = "SELECT * FROM albums
+    WHERE albums.artist_id = $1
+    GROUP BY id, title"
+    values = [@id]
+    album_name = SqlRunner.run(sql, values)
+    new_album = album_name.map {|album| Album.new(album)}
+    return new_album
+  end
 
   def Artist.delete
     sql = "DELETE FROM artists;"
@@ -48,4 +57,4 @@ class Artist
     return all_artists.map { |artist| Artist.new(artist)}
   end
 
-  end #end of class
+end #end of class

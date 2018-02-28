@@ -2,7 +2,7 @@
 <html>
 <head>
   <meta charset="utf-8">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <link rel="stylesheet" type="text/css" href="/style.css">
   <link <link href="https://fonts.googleapis.com/css?family=Bungee|Bungee+Shade|Bungee+Hairline|Kameron" rel="stylesheet">
   <title>Epic Inventory</title>
 </head>
@@ -21,7 +21,12 @@
       </div>
     </li>
     <li>
-      <a href="/albums">Albums</a>
+      <div class="dropdown">
+        <span><a href="/albums">Albums</a></span>
+        <div class="dropdown-content">
+          <a href="/albums/new">Add New Album</a>
+        </div>
+      </div>
     </li>
   </ul>
 </navbar>

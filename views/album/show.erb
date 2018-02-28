@@ -1,14 +1,8 @@
 <h2>Album ID: <%= @album.id %></h2>
 
-<p>
-<%= @album.artist %>
+<h2><a href="/artists/<%= @album.artist_id %>" method="get"><%= @album.artist %></a></h2>
 <div>
-<%= @album.title %>
-<div>
-  <img src="../album_art/<%= @album.id %>.jpg">
-<p>
-
-
+  <img src="../album_art/<%= @album.id %>.jpg" alt="<%= @album.title %>"/>
 <form action="/albums/<%= @album.id %>/delete" method="post">
    <input type="submit" value="Delete Album"><td></form>
 <div>
