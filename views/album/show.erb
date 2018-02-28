@@ -1,9 +1,14 @@
 <h2>Album ID: <%= @album.id %></h2>
 
+<h3>£<%= @album.sell_price %></h3>
+<h3>Quantity: <%= @album.quantity %></h3>
 <h2><a href="/artists/<%= @album.artist_id %>" method="get"><%= @album.artist %></a></h2>
 <div>
   <img src="../album_art/<%= @album.id %>.jpg" alt="<%= @album.title %>"/>
-<form action="/albums/<%= @album.id %>/delete" method="post">
-   <input type="submit" value="Delete Album"><td></form>
-<div>
-   <a href="/albums/<%= @album.id %>/edit">Edit Album</a>
+
+  <form action="/albums/<%= @album.id %>/delete" method="post">
+    <button type="submit"> Delete Album</button>
+  </form>
+  <form action="/albums/<%= @album.id %>/edit" method="get">
+    <button type="submit">Edit Album</button>
+  </form>

@@ -6,7 +6,7 @@
     <th>Artist</th>
     <th>Title</th>
     <th>Stock Level</th>
-    <th>Sell Price (£)</th>
+    <th>Sell Price</th>
   </tr>
 
   <% @albums.each do |album| %>
@@ -16,7 +16,7 @@
     <td><%= album.artist %></td>
     <td><a href="/albums/<%= album.id %>" method="get"><%= album.title %></a></td>
     <td><%= album.stock_level %></td>
-    <td><%= album.sell_price %></td>
+    <td>£<%= album.sell_price %></td>
   </tr>
   <% end %>
 </table>

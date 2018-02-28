@@ -1,13 +1,10 @@
 <h2><%= @artist.name %></h2>
 
-<div>
+<form action="/artists/<%= @artist.id %>/delete" method="post">
+  <button type="submit" >Delete Artist</button>
+</form>
+<div class="container">
 <% for album in @artist.albums %>
-<img src="../album_art/<%= album.id %>.jpg" alt="<%= album.title %>"/>
+<img src="../album_art/<%= album.id %>.jpg"/>
 <% end %>
-
-  <table>
-    <td><form action="/artists/<%= @artist.id %>/delete" method="post">
-      <input type="submit" value="Delete Artist"></td>
-    </tr>
-  </form>
-</table>
+</div>

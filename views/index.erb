@@ -6,7 +6,7 @@
     <th>Stock Level</th>
     <th>Buy Price</th>
     <th>Sell Price</th>
-    <th>Profit (£)</th>
+    <th>Profit</th>
 
 
   </tr>
@@ -18,9 +18,9 @@
     <td><%= album.artist %></td>
     <td><%= album.title %></td>
     <td><%= album.stock_level %></td>
-    <td><%= album.buy_price %></td>
-    <td><%= album.sell_price %></td>
-    <td><%= album.profit %></td>
+    <td>£<%= album.buy_price %></td>
+    <td>£<%= album.sell_price %></td>
+    <td>£<%= album.profit %></td>
 
   </tr>
 <% end %>
