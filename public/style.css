@@ -144,8 +144,16 @@ button {
   border-radius: 2px;
 }
 
-form {
+#delete_button {
   padding-left: 3em;
+}
+
+#add_artist_button {
+  padding-bottom: 27em;
+}
+
+#add_album_button {
+padding-bottom: 23em;
 }
 
 footer {

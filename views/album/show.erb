@@ -7,8 +7,12 @@
   <img src="../album_art/<%= @album.id %>.jpg" alt="<%= @album.title %>"/>
 
   <form action="/albums/<%= @album.id %>/delete" method="post">
-    <button type="submit"> Delete Album</button>
+    <div id="delete_album_button">
+      <button type="submit"> Delete Album</button>
+    </div>
   </form>
   <form action="/albums/<%= @album.id %>/edit" method="get">
-    <button type="submit">Edit Album</button>
+    <div id="edit_album_button">
+      <button type="submit">Edit Album</button>
+    </div>
   </form>

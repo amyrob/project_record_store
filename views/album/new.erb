@@ -9,18 +9,19 @@
     <option value=<%= artist.id %>><%= artist.name %> </option>
     <% end  %>
   </select>
-  <br>
-  <label for="title"> Title </label>
-  <input id="title" type="text" name="title"/>
-  <br>
+  <div>
+    <label for="title"> Title </label>
+    <input id="title" type="text" name="title"/>
+  </div>
   <label for="quantity"> Quantity </label>
   <input id="quantity" type="text" name="quantity"/>
-  <br>
-  <label for="buy-price"> Buy Price </label>
-  <input id="buy-price" type="text" name="buy_price"/>
-  <br>
+  <div>
+    <label for="buy-price"> Buy Price </label>
+    <input id="buy-price" type="text" name="buy_price"/>
+  </div>
   <label for="sell-price"> Sell Price </label>
   <input id="sell-price" type="text" name="sell_price"/>
-  <br>
-  <button type="submit">Add Album</button>
+  <div id="add_album_button">
+    <button type="submit">Add Album</button>
+  </div>
 </form>
