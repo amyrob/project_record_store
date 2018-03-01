@@ -38,12 +38,14 @@ navbar a {
 
 .dropdown:hover .dropdown-content {
   display: block;
+  width: 10em;
+  background-color: teal;
 }
 .dropdown-content {
   font-size: 0.75em;
   display: none;
-  position: relative;
-  background-color: teal;
+  position: absolute;
+  background-color: #E9F1F7;
   min-width: 10em;
   padding: 0.1em 0.1em;
 }
@@ -153,7 +155,7 @@ button {
 }
 
 #add_album_button {
-padding-bottom: 23em;
+padding-bottom: 27em;
 }
 
 footer {
