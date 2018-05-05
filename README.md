@@ -1,3 +1,5 @@
+## Project Record Store
+
 Project to consolidate...
 
 - Ruby fundamentals
@@ -6,7 +8,7 @@ Project to consolidate...
 - Web Programming ( REST/MVC )
 - Databases with CRUD actions
 
-## Record Store
+## Brief
 
 The owner of a Record Store wants an app which will help to keep on top of the store inventory. This is not an app that customers will see, but will be used to check stock levels and see what needs to be ordered soon.
 
